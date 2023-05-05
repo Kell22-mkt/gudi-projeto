@@ -1,0 +1,29 @@
+.TopHeader
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding: 5px 0
+
+    & section
+        display: flex
+        flex-wrap: wrap
+        display: flex
+        align-items: center
+        justify-content: center
+
+    & section a
+        padding: 10px 20px
+        display: inline-block
+        color: #005BD5
+        text-decoration: none
+
+
+@media (max-width: 750px) 
+    .TopHeader
+        display: grid
+        
+        & > div
+            text-align: center
+            padding: 1em 0
+        
+

@@ -1,0 +1,58 @@
+.Wallpaper
+    height: 450px
+    background: url("./wallpaper2x.png")
+    background-size: cover
+    background-position: center
+    display: block
+    background-color: red
+    padding: 5em
+    display: flex
+    align-items: center
+
+    section
+        width: 50%
+        max-width: 100%
+        color: #005BD5
+        display: flex
+        flex-direction: column
+        gap: 20px
+
+    h1
+        font-size: 35px
+        font-weight: 900
+        width: 450px
+
+    section > *
+        display: block
+
+
+@media (max-width: 750px) 
+
+    .Wallpaper
+        width: 100%
+        padding: 0px
+        overflow: hidden
+        align-items: start
+        background-position: center -111px
+
+        & > *
+            max-width: 100%
+
+        section
+            width: 100%
+            padding: 1em
+            display: grid
+            margin-top: auto
+
+            text-align: center
+        
+
+        section *
+            text-align: center
+            margin: auto
+
+        h1
+            width: 100%
+        
+    
+    

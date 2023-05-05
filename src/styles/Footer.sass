@@ -1,0 +1,26 @@
+@use 'Variables'
+
+.Footer
+    display: flex
+    justify-content: space-around
+    gap: 2em
+
+
+    & *
+        color: Variables.$blue
+        text-decoration: none
+        list-style: none
+
+    section
+        padding: 1em
+        b
+            display: block
+            padding-bottom: 20px
+
+
+@media (max-width: 750px) 
+    .Footer
+        display: grid
+        grid-template-columns: 1fr
+        gap: 10px
+    

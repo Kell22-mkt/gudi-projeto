@@ -1,0 +1,33 @@
+@use 'Variables'
+
+.Points
+    text-align: center    
+    width: 600px
+    margin: auto
+    margin-top: 2em
+    display: flex
+    gap: 10px
+
+.Points-item
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 1em
+    gap: 20px
+    &:nth-child(2n)
+        background-color: Variables.$blue
+        color: white
+    &:nth-child(2n+1)
+        background-color: Variables.$gray-1
+        color: Variables.$blue
+    img
+        width: 50%
+
+@media (max-width: 750px) 
+    .Points 
+        grid-template-columns: 1fr 1fr
+        display: grid
+        width: 100%
+    

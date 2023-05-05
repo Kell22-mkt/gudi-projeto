@@ -1,0 +1,51 @@
+.Mural
+    /* padding: 1em */
+    text-align: center    
+    width: 600px
+    margin: auto
+    margin-top: 4em
+
+    h1
+        width: 300px
+        margin: auto
+        color: gray
+
+    h3
+        color: gray
+        font-size: 13px
+        font-weight: normal
+
+    section
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        width: 100%
+        margin: auto
+        justify-content: center
+        gap: 10px
+        margin-top: 1em
+
+
+.Mural-item
+    width: 100%
+    /* height: 150px */
+    overflow: hidden
+    display: flex
+    justify-content: center
+    align-items: center
+
+
+    img
+        height: 100%
+        width: 100%
+
+
+@media (max-width: 750px) 
+    .Mural
+        width: 100%
+
+    h1, h3
+        width: 100%
+    
+    .Mural-item
+        display: grid
+    

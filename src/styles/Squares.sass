@@ -1,0 +1,29 @@
+.Squares
+    width: 100%
+    display: flex
+
+    &-item
+        background-position: center
+        background-size: cover
+        width: 100%
+        height: 200px
+        background-color: gray
+        display: flex
+        justify-content: center
+        align-items: center
+        overflow: hidden
+        position: relative
+
+    &-item img
+        position: absolute
+        scale: 1
+        transition: 1s
+
+    &-item:hover img
+        scale: 1.2
+        transition: 0.5s
+
+@media (max-width: 750px) 
+    .Squares
+        display: grid
+        grid-template-columns: 1fr 1fr

@@ -1,0 +1,88 @@
+@use 'Variables'
+
+.Bloco
+    display: flex
+    width: 100%
+    color: Variables.$blue
+    order: 1
+
+    background-color: Variables.$blue
+    color: Variables.$white
+
+    &-line::before
+        content: ""
+        width: 50px
+        height: 1px
+        display: inline-block
+        margin-right: 10px
+        font-size: 10px
+        background-color: Variables.$white
+
+    // p1
+    &:nth-child(2n)
+        background-color: Variables.$white
+        color: Variables.$blue
+        .Bloco-line
+            color: Variables.$blue
+        .Bloco-line::before
+            background-color: Variables.$blue
+
+        .Bloco-B2
+            order: 0
+            &-line::before
+                background-color: Variables.$white
+        
+    // p2
+    &:nth-child(2n+1)
+        background-color: Variables.$blue
+        color: Variables.$white
+        .Bloco-line
+            color: Variables.$white
+        .Bloco-line::before
+            background-color: Variables.$white
+
+        .Bloco-B2
+            order: 1
+            &-line::before
+                background-color: Variables.$blue
+        
+    section
+        flex: 1
+        height: 350px
+
+    &-B1
+        display: flex
+        align-items: start
+        justify-content: center
+        flex-direction: column
+        
+
+    &-B1 div
+        display: flex
+        flex-direction: column
+        gap: 20px
+        width: 400px
+        max-width: 100%
+        margin: auto
+        padding: 2em
+
+    &-B2
+        background: url("./public/f1-2x.png")
+        background-size: cover
+        background-position: center
+       
+    &-line
+        color: Variables.$blue
+        display: flex
+        align-items: center
+        letter-spacing: 3px
+        text-transform: uppercase
+
+
+@media (max-width: 750px) 
+
+    .Bloco
+        display: block
+        
+        section 
+            height: 50vh 
